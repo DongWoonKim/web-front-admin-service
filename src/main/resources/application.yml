@@ -9,3 +9,4 @@ spring:
     port: 5672
     username: user
     password: 1234
+    connection-timeout: 5s
