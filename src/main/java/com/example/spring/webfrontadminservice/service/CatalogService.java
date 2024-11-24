@@ -1,6 +1,5 @@
 package com.example.spring.webfrontadminservice.service;
 
-import com.example.spring.webfrontadminservice.config.RabbitMQConfig;
 import com.example.spring.webfrontadminservice.dto.CreateCatalogRequestDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
