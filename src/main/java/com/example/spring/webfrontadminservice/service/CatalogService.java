@@ -11,11 +11,13 @@ import org.springframework.stereotype.Service;
 public class CatalogService {
 
     private final RabbitTemplate rabbitTemplate;
+    public static final String EXCHANGE_NAME = "polar.admin";
+    public static final String ROUTING_KEY = "catalog.create";
 
     public void createCatalog(CreateCatalogRequestDTO createCatalogRequestDTO) {
         rabbitTemplate.convertAndSend(
-                RabbitMQConfig.EXCHANGE_NAME,
-                RabbitMQConfig.ROUTING_KEY,
+                EXCHANGE_NAME,
+                ROUTING_KEY,
                 createCatalogRequestDTO
         );
     }
